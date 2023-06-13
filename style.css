@@ -1,0 +1,161 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: hsl(235, 18%, 26%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14.5px;
+}
+
+.all {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    background-color: white;
+    border-radius: 20px;
+    width: 51%;
+    margin-left: 25%;
+    margin-top: 120px;
+}
+
+.img img {
+    margin: 10px;
+    height: 380px;
+}
+
+#mobileimg {
+    display: none;
+}
+
+.text {
+    padding-top: 40px;
+    margin-left: 40px;
+    width: 51%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+li {
+    list-style: url(assets/images/icon-list.svg);
+    list-style-position: inside;
+}
+
+li {
+    align-items: baseline;
+}
+
+.input {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 14px;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid rgb(189, 189, 189);
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 85%;
+    background-color: hsl(234, 29%, 20%);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(4, 100%, 67%);
+    transition: all .6s;
+}
+
+
+.success {
+    display: none;
+    width: 25%;
+    padding: 40px;
+    border-radius: 30px;
+    background-color: white;
+    margin-left: 35%;
+    font-size: 17px;
+    margin-top: 150px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#emaildisplay {
+    font-weight: 700;
+}
+
+@media only screen and (max-width:450px) {
+    #desktopimg {
+        display: none;
+    }
+
+    #mobileimg {
+        display: block;
+        height: auto;
+        padding: 0%;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .success {
+        width: 90%;
+        padding: 0px;
+        padding-left: 30px;
+        border-radius: 30px;
+        margin-left: 0%;
+        margin-top: 150px;
+    }
+
+    .img img {
+        margin: 0%;
+
+        width: 100%;
+    }
+
+    .all {
+        width: 100%;
+        margin: 0%;
+
+    }
+
+
+    .text {
+        margin: 0%;
+        margin-left: 5%;
+        width: 100%;
+    }
+
+    input {
+        margin-top: 5px;
+        height: 30px;
+    }
+
+    button {
+        padding: 20px;
+    }
+}

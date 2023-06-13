@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <section class="all" id="all">
+    <!-- Sign-up form start -->
+    <section class="text">
+      <div class="texts">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+      </div>
+      <div class="input">
+        <form id="forms" autocomplete="on">
+          <label for="input">
+            Email address:</label><br>
+          <input type="email" name="email" id="input" placeholder="email@company.com" autocomplete="email">
+          <button onclick="displaySuccess()">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Desmond Izu</a>.
+      </div>
+    </section>
+    <section class="img">
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="" id="desktopimg">
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="" id="mobileimg">
+    </section>
+    <!-- Sign-up form end -->
+  </section class="all">
+  <!-- Success message start -->
+  <section class="success" id="success">
+    <img src="assets/images/icon-success.svg" alt="">
+    <h2>Thanks for subscribing!</h2>
+    <P>A confirmation email has been sent to <span id="emaildisplay">ash@loremcompany.com.</span>
+      Please open it and click the button inside to confirm your subscription.</P>
+    <button onclick=" resetPage()">Dismiss message</button>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Desmond Izu</a>.
+    </div>
+  </section>
+  <!-- Success message end -->
+
+</body>
+<script>
+  function displaySuccess() {
+    document.getElementById('all').style.display = 'none';
+    document.getElementById('success').style.display = 'block';
+    const email = document.getElementById('input').value;
+    document.getElementById('emaildisplay').innerHTML = email;
+  }
+
+  function resetPage() {
+    document.getElementById('all').style.display = 'flex';
+    document.getElementById('success').style.display = 'none';
+    document.getElementById('input').value = '';
+  }
+</script>
+
+</html>
